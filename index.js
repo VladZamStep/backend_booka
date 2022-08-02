@@ -33,8 +33,9 @@ mongoose.connection.on("connected", () => {
 app.use(cookieParser())
 app.use(express.json());
 app.use(cors({
-    origin: ["http://localhost:3000", "http://localhost:3001", "https://admin-booka.herokuapp.com/", "https://booka-main.herokuapp.com/"],
+    origin: ["https://admin-booka.herokuapp.com/", "https://booka-main.herokuapp.com/"],
     credentials: true,
+    optionSuccessStatus: 200
 })
 );
 
